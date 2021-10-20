@@ -93,7 +93,7 @@ def saisie_date_naissance():
 
     date_naissance = datetime.date(anneeSaisie, moisSaisie, jourSaisie)
 
-    return(date_naissance)
+    return date_naissance
 
 
 def age(date_naissance):
@@ -119,11 +119,11 @@ def est_majeur():
     return age(date_naissance)>=18
     
 def test_acces():
-    saisie_date_naissance()
+    #date_naissance=saisie_date_naissance()
     if est_majeur()==True:
-        print("Bonjour, vous avez ",age(date_naissance()),"ans, Accès autorisé ")
+        print("Bonjour, vous avez ",age(date_naissance),"ans, Accès autorisé ")
     else:
-        print("Désolé, vous avez ",age(date_naissance()),"ans, Accès interdit ")
+        print("Désolé, vous avez ",age(date_naissance),"ans, Accès interdit ")
     
     
 k=15
@@ -132,6 +132,5 @@ test_mess(k)
 test_biss(t)
 test_equation(5,10,1)
 date_est_valide(31,12,2000)
-#print(age(date_naissance()))
-#print(est_majeur())
+date_naissance=saisie_date_naissance()
 test_acces()
